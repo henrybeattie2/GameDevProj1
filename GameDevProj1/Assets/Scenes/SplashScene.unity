@@ -374,6 +374,7 @@ MonoBehaviour:
   timeCount: 0
   HighTime: 0
   BossAlive: 1
+  lives: 3
 --- !u!114 &802455078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,7 +617,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 09fbff32850681349a01aae69f5d51d3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 768d167d1122e9244ab66b63251a723d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossBulletSpread : MonoBehaviour
+public class BossBulletSpreadNA : MonoBehaviour
 {
     public GameObject SpreadBullet;
     public Vector2 direction;
     public float speed = 5f;
     public ParticleSystem ImpactPS;
     public GameObject BulletSpread;
+
+    private int sTime;
 
     private GameObject Bullet;
     private GameObject Bullet2;
@@ -43,14 +45,15 @@ public class BossBulletSpread : MonoBehaviour
 
     IEnumerator StopTime()
     {
-        yield return new WaitForSeconds(2);
+        sTime = Random.Range(1, 4);
+        yield return new WaitForSeconds(sTime);
         speed = 0;
         StartCoroutine(SplitTime());
     }
 
     IEnumerator SplitTime()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.25f);
 
         Bullet = Instantiate(SpreadBullet);
         Bullet2 = Instantiate(SpreadBullet);

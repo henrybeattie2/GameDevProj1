@@ -5,15 +5,17 @@ using TMPro;
 
 public class PlayerHealthSystemJA : MonoBehaviour
 {
-    public int lives = 3;
+    //public int lives = 3;
     public GameObject heart3;
     public GameObject heart2;
+
+    public AudioSource playerhurt;
 
     private bool inCoolDown = false;
 
     void Start()
     {
-
+        //playerhurt = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -29,21 +31,35 @@ public class PlayerHealthSystemJA : MonoBehaviour
             {
                 StartCoroutine(CoolDown());
                 inCoolDown = true;
-                Debug.Log("Lives" + lives);
-                
-                lives = lives - 1;
-                if (lives == 2)
+                Debug.Log("Lives" + Constants.C.lives);
+
+                Constants.C.lives = Constants.C.lives - 1;
+
+                if (Constants.C.lives == 2)
                 {
+                    if (!playerhurt.isPlaying)
+                    {
+                        playerhurt.PlayOneShot(playerhurt.clip, 0.5f);
+                    }
                     Destroy(heart3);
                 }
-                if (lives == 1)
+                if (Constants.C.lives == 1)
                 {
+                    if (!playerhurt.isPlaying)
+                    {
+                        playerhurt.PlayOneShot(playerhurt.clip, 0.5f);
+                    }
                     Destroy(heart2);
                 }
-                if (lives == 0)
+                if (Constants.C.lives == 0)
                 {
+                    Constants.C.PlayerAlive = false;
+                    if (!playerhurt.isPlaying)
+                    {
+                        playerhurt.PlayOneShot(playerhurt.clip, 0.5f);
+                    }
                     Debug.Log("GAME OVER");
-                    //UnityEngine.SceneManagement.SceneManager.LoadScene("GameOverSceneLose");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("GameOverSceneLose");
                 }
 
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossBulletSplit : MonoBehaviour
+public class BossBulletSplitNA : MonoBehaviour
 {
     public GameObject SplitBullet;
     public GameObject PartentBullet;
@@ -12,6 +12,8 @@ public class BossBulletSplit : MonoBehaviour
     public ParticleSystem ImpactPS;
 
     private GameObject Bullet;
+
+    private int sTime;
 
     private Vector3 BulletPosition;
 
@@ -39,7 +41,8 @@ public class BossBulletSplit : MonoBehaviour
 
     IEnumerator SplitTime()
     {
-        yield return new WaitForSeconds(2);
+        sTime = Random.Range(1, 5);
+        yield return new WaitForSeconds(sTime);
 
         Bullet = Instantiate(SplitBullet);
 
