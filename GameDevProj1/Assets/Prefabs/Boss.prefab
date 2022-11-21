@@ -39,8 +39,18 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 148.79668, y: 20.343336}
   m_SizeDelta: {x: 866.80005, y: 375.6}
+=======
+<<<<<<< HEAD
+  m_AnchoredPosition: {x: 0, y: 3.94}
+  m_SizeDelta: {x: 714, y: 299.33334}
+=======
+  m_AnchoredPosition: {x: 148.79668, y: 20.343336}
+  m_SizeDelta: {x: 866.80005, y: 375.6}
+>>>>>>> 5653d9bd5d257ac0647ef4368252101ddb12d7be
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4561773079414301125
 Canvas:
@@ -132,6 +142,7 @@ GameObject:
   - component: {fileID: 923336514277816109}
   - component: {fileID: 3726280964332817178}
   - component: {fileID: 6555009549354754205}
+  - component: {fileID: 6027373293188965175}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -301,6 +312,27 @@ MonoBehaviour:
   BulletSplit: {fileID: 6057238340961583229, guid: 4d3a0da2ecb9b9a4587091d972f371c4, type: 3}
   BulletBomb: {fileID: 9041599348773397296, guid: 7d14fbb0fa3309e48ac2c81a42e37bbf, type: 3}
   BossShootPoint: {fileID: 2957788521276392864}
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  coolDownTime: 1
+--- !u!114 &6027373293188965175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2733329925290848465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2465358fec02cb2449e61d30786cb426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHealthBarTransform: {fileID: 5098373360258533777}
+  currentHealth: 10
+=======
+>>>>>>> 5653d9bd5d257ac0647ef4368252101ddb12d7be
+>>>>>>> Stashed changes
 --- !u!1 &2957788521276392864
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +457,15 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -445.81, y: -51.93}
+=======
+<<<<<<< HEAD
+  m_AnchoredPosition: {x: 0, y: 0}
+=======
+  m_AnchoredPosition: {x: -445.81, y: -51.93}
+>>>>>>> 5653d9bd5d257ac0647ef4368252101ddb12d7be
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 16, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7026653167647189599
@@ -501,7 +541,15 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -445.80997, y: -51.92999}
+=======
+<<<<<<< HEAD
+  m_AnchoredPosition: {x: 0, y: 0}
+=======
+  m_AnchoredPosition: {x: -445.80997, y: -51.92999}
+>>>>>>> 5653d9bd5d257ac0647ef4368252101ddb12d7be
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 16, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2651482065171895841

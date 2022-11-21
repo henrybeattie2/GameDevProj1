@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossHealthBarHB : MonoBehaviour
 {
     public RectTransform bossHealthBarTransform;
-    public float currentHealth = 1;
+    public float currentHealth = 10;
     private bool inCoolDown = false;
     // Start is called before the first frame update
     void Start()
@@ -17,9 +17,22 @@ public class BossHealthBarHB : MonoBehaviour
     void Update()
     {
 
+        //if(!inCoolDown)
+        //{
+            //inCoolDown = true;
+            //StartCoroutine(AddDamage());
+        //}
     }
 
-    public void ScaleHealthBar(float amount)
+    //IEnumerator AddDamage()
+    //{
+       // yield return new WaitForSeconds(1f);
+        //ScaleHealthBar(0.3f);
+        //inCoolDown=false;
+   // }
+
+
+    public void ScaleBossHealthBar(float amount) //BossHealthBar ?
     {
         currentHealth -= amount;
         if(currentHealth < 0)

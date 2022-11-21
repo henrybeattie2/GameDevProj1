@@ -6,6 +6,7 @@ public class BossHealthSystemJA : MonoBehaviour
 {
     public float health = 10;
     public TMP_Text healthText;
+    private BossHealthBarHB HB;                          //Added 
 
     public RectTransform bossHealthBarTransform;
 
@@ -14,6 +15,7 @@ public class BossHealthSystemJA : MonoBehaviour
     void Start()
     {
         healthText.text = "Health: 10";
+        HB = GetComponent<BossHealthBarHB>();               //Added
     }
 
     // Update is called once per frame
@@ -27,6 +29,12 @@ public class BossHealthSystemJA : MonoBehaviour
         GameObject gameObject = collision.gameObject;
         if (gameObject.tag == "Bullet")
         {
+
+            health -= 1f;
+            ScaleHealthBar();
+
+            health--;
+            HB.ScaleBossHealthBar(currentHealth / 10);                      //Added           
             health -= 1f;
             //healthText.text = "Health: " + health.ToString();
             ScaleHealthBar();
